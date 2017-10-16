@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List of Addresses</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let address of filteredAddresses">
+      {{address.streetAlphsNumeric}} {{address.streetName}} {{ address.streetSuffix}} {{ address.suburb}}
+      <div class="item-note" item-end>
+        {{address.city}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>
